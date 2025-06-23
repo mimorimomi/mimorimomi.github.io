@@ -1,13 +1,11 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import idLogo from "../assets/id.svg";
+import IdLogo from "../assets/id.svg?raw";
 ---
 
 <Layout>
   <header>
-    <h1>
-      <img src={idLogo.src} alt="" />
-    </h1>
+    <h1 set:html={IdLogo} />
   </header>
   <main>
     <h1>このサイトについて</h1>
