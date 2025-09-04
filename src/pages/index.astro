@@ -6,78 +6,88 @@ import Avatar from "../assets/avatar.png";
 
 <Layout>
   <header>
-    <h1 set:html={IdLogo} />
+    <h1 class="flex justify-center" set:html={IdLogo} />
   </header>
-  <main>
-    <img src={Avatar.src} alt="" width="200" height="200" />
-    <p>
-      藤野未森のウェブサイト。Astro で作り、GitHub Pages
-      でホスティングしている。インターネットと辛い食べ物とホラー映画、昔ながらの喫茶店が好き。趣味っぽい話やウェブのことを気まぐれで書くかも。
-    </p>
+  <main class="grid gap-y-16">
+    <div
+      class="grid grid-cols-1 md:grid-cols-[auto_1fr] gap-8 md:gap-x-16 gap-y-8"
+    >
+      <img
+        class="rounded-full object-cover w-32 h-32 md:w-48 md:h-48 mx-auto md:mx-0 row-span-1 md:row-span-2 border-2 border-[var(--color-light-mode)] dark:border-none"
+        src={Avatar.src}
+        alt=""
+        width="200"
+        height="200"
+      />
+      <p>
+        藤野未森のウェブサイト。Astro で作り、GitHub Pages
+        でホスティングしている。インターネットと辛い食べ物とホラー映画、昔ながらの喫茶店が好き。趣味っぽい話やウェブのことを気まぐれで書くかも。
+      </p>
+      <p class="text-base flex flex-wrap gap-x-4">
+        <a href="https://github.com/mimorimomi">GitHub</a>/
+        <a href="https://zenn.dev/mimorifujino">Zenn</a>/
+        <a href="https://youtrust.jp/users/a20993ae4f24078e35ba1c9c60ce77d4"
+          >YOUTRUST</a
+        >/
+        <a href="https://filmarks.com/users/rmmue">Filmarks</a>/
+        <a href="https://github.com/mimorimomi/whoami/discussions"
+          >whoami Discussions（雑記）</a
+        >/
+        <a href="https://github.com/mimorimomi/mimorimomi.github.io"
+          >このサイトのリポジトリ</a
+        >
+      </p>
+    </div>
     <hr />
-    <p>
-      <a href="https://github.com/mimorimomi">GitHub</a>
-      <a href="https://zenn.dev/mimorifujino">Zenn</a>
-      <a href="https://youtrust.jp/users/a20993ae4f24078e35ba1c9c60ce77d4"
-        >YOUTRUST</a
-      >
-      <a href="https://filmarks.com/users/rmmue">Filmarks</a>
-      <a href="https://github.com/mimorimomi/whoami/discussions"
-        >whoami Discussions（雑記）</a
-      >
-      <a href="https://github.com/mimorimomi/mimorimomi.github.io"
-        >このサイトのリポジトリ</a
-      >
-    </p>
-    <section>
+    <section class="grid gap-y-8">
       <h2>書いたもの</h2>
-      <ol>
+      <ol class="grid gap-y-4">
         <li>
           <time datetime="2024-12-18T00:00:00+09:00">2024/12/18</time>
           <a href="https://zenn.dev/ourly_tech_blog/articles/a321ddd60460a5"
             >GitHub Actions による Issue 自動生成で、TIL を続けた実践記</a
           >
-          <span>Zenn（外部サイト）</span>
+          <small>Zenn（外部サイト）</small>
         </li>
         <li>
           <time datetime="2024-10-31T00:00:00+09:00">2024/10/31</time>
           <a href="https://zenn.dev/ourly_tech_blog/articles/a58f1d41db0317"
             >プロセス細分化で実現する開発生産性向上メソッド</a
           >
-          <span>Zenn（外部サイト）</span>
+          <small>Zenn（外部サイト）</small>
         </li>
         <li>
           <time datetime="2024-02-28T17:14:00+09:00">2024/02/28</time>
           <a href="https://note.com/mimorimomi/n/n07f6117985ca"
             >ourlyってぶっちゃけどうなの？入社して約1年経ったフロントエンドエンジニアが感じたこと</a
           >
-          <span>note（外部サイト）</span>
+          <small>note（外部サイト）</small>
         </li>
       </ol>
     </section>
-    <section>
+    <section class="grid gap-y-8">
       <h2>その他</h2>
-      <ol>
+      <ol class="grid gap-y-4">
         <li>
           <time datetime="2024-07-16T00:00:00+09:00">2024/07/16</time>
           <a href="https://high-five.careers/column/ourly/"
             >数値化しづらいコミュニケーションを“科学する”。社内コミュニケーション支援SaaS「ourly」のエンジニアが大切にしていること</a
           >
-          <span>HIGH-FIVE（外部サイト）</span>
+          <small>HIGH-FIVE（外部サイト）</small>
         </li>
         <li>
           <time datetime="2024-02-21T00:00:00+09:00">2024/02/21</time>
           <a href="https://jp.findy-team.io/case/intereview/ourly/"
             >プルリクオープンまでの時間が9分の1に。15名でFourKeys向上に向き合うourlyの取り組みとは？</a
           >
-          <span>Findy Team+（外部サイト）</span>
+          <small>Findy Team+（外部サイト）</small>
         </li>
         <li>
           <time datetime="2024-01-26T13:34:00+09:00">2024/01/26</time>
           <a href="https://note.com/ourly/n/n626dcbd98caf"
             >プロダクトに愛があるから、妥協しない。エンジニア組織の文化とは？</a
           >
-          <span>note（外部サイト）</span>
+          <small>note（外部サイト）</small>
         </li>
       </ol>
     </section>
