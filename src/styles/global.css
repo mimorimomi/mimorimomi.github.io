@@ -1,1 +1,29 @@
 @import "tailwindcss";
+
+@layer theme {
+  :root {
+    --font-sans: sans-serif;
+
+    --color-light-mode: #292929;
+    --color-dark-mode: #EEE;
+
+    --background-color-light-mode: #EEE;
+    --background-color-dark-mode: #272A33;
+  }
+}
+
+@layer base {
+  html {
+    @apply bg-[var(--background-color-light-mode)] dark:bg-[var(--background-color-dark-mode)] text-[var(--color-light-mode)] dark:text-[var(--color-dark-mode)];
+  }
+
+  body {
+    @apply mx-auto max-w-4xl px-8 text-lg;
+
+    box-sizing: content-box;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+}
