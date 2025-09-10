@@ -18,7 +18,7 @@
   }
 
   body {
-    @apply mx-auto my-16 max-w-4xl px-8 grid gap-y-24 text-lg;
+    @apply mx-auto my-16 max-w-4xl px-8 grid gap-y-16 text-lg;
 
     box-sizing: content-box;
   }
