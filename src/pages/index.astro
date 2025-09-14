@@ -2,9 +2,11 @@
 import Layout from "../layouts/Layout.astro";
 import IdLogo from "../assets/id.svg?raw";
 import Avatar from "../assets/avatar.png";
+
+const title = "@mimorimomi";
 ---
 
-<Layout>
+<Layout title={title}>
   <header>
     <h1 class="flex justify-center" set:html={IdLogo} />
   </header>
