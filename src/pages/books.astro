@@ -1,0 +1,33 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { getCollection } from "astro:content";
+
+const readBooks = await getCollection("books/read");
+const unreadBooks = await getCollection("books/unread");
+
+const title = "本の記録";
+---
+
+<Layout title={title}>
+  <h1 class="text-4xl">{title}</h1>
+  <p>読んだ本、貯本<sup><a href="#tyobon">1</a></sup>の一覧。</p>
+  <section>
+    <h2>読んだ本</h2>
+    <ul>
+      {readBooks.map((book) => (
+        <li>{book.data.title}</li>
+      ))}
+    </ul>
+  </section>
+  <section>
+    <h2>貯本</h2>
+    <ul>
+      {unreadBooks.map((book) => (
+        <li>{book.data.title}</li>
+      ))}
+    </ul>
+  </section>
+  <ul>
+    <li id="tyobon">積読ではない。読むために本を貯めているのだ！というポジティブな捉え方が気に入っているので拝借した。</li>
+  </ul>
+</Layout>
