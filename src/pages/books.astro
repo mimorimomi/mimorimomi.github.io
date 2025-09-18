@@ -5,12 +5,12 @@ import { getCollection } from "astro:content";
 const readBooks = await getCollection("books/read");
 const unreadBooks = await getCollection("books/unread");
 
-const title = "本の記録";
+const title = "本の記録（工事中）";
 ---
 
 <Layout title={title}>
   <h1 class="text-4xl">{title}</h1>
-  <p>読んだ本、貯本<sup><a href="#tyobon">1</a></sup>の一覧。</p>
+  <p>読んだ本、貯本<sup><a href="#tyobon">1</a></sup>の一覧。絶賛開発中。</p>
   <section>
     <h2>読んだ本</h2>
     <ul>
