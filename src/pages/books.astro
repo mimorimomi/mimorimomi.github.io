@@ -14,17 +14,13 @@ const title = "本の記録（工事中）";
   <section>
     <h2>読んだ本</h2>
     <ul>
-      {readBooks.map((book) => (
-        <li>{book.data.title}</li>
-      ))}
+      {readBooks.map((book) => <li>{book.data.title}</li>)}
     </ul>
   </section>
   <section>
     <h2>貯本</h2>
     <ul>
-      {unreadBooks.map((book) => (
-        <li>{book.data.title}</li>
-      ))}
+      {unreadBooks.map((book) => <li>{book.data.title}</li>)}
     </ul>
   </section>
   <ul>
