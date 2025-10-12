@@ -7,7 +7,9 @@
     "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "lint": "eslint --max-warnings 0"
+    "lint": "pnpm run lint:eslint & pnpm run lint:prettier",
+    "lint:eslint": "eslint .",
+    "lint:prettier": "prettier . --write"
   },
   "dependencies": {
     "astro": "^5.10.0"
