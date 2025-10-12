@@ -6,7 +6,8 @@
     "dev": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "lint": "eslint --max-warnings 0"
   },
   "dependencies": {
     "astro": "^5.10.0"
